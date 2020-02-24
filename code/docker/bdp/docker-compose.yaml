@@ -1,0 +1,67 @@
+################################################################################
+#  Licensed to the Apache Software Foundation (ASF) under one
+#  or more contributor license agreements.  See the NOTICE file
+#  distributed with this work for additional information
+#  regarding copyright ownership.  The ASF licenses this file
+#  to you under the Apache License, Version 2.0 (the
+#  "License"); you may not use this file except in compliance
+#  with the License.  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+# limitations under the License.
+################################################################################
+
+version: "2.1"
+
+services:
+  client:
+    image: flink-stream-app
+    entrypoint: ["/tmp/waiting/wait-for-it.sh", "rabbitmq:5672", "--timeout=0", "--strict", "--", "/docker-entrypoint.sh", "flink", "run", "-d", "-p", "3", "/opt/StreamApp.jar", "--bootstrap.servers", "rabbit:5672", "--checkpointing", "--event-time"]
+    depends_on:
+      - jobmanager
+      - rabbitmq
+    volumes:
+      - ./conf:/opt/flink/conf
+      - ./waiting/:/tmp/waiting/
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+
+  jobmanager:
+    image: flink:1.9-scala_2.11
+    command: "jobmanager.sh start-foreground"
+    ports:
+      - 8081:8081
+    volumes:
+      - ./conf:/opt/flink/conf
+      - flink-checkpoint-directory:/tmp/flink-checkpoint-directory
+      - /tmp/flink-savepoints-directory:/tmp/flink-savepoints-directory
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+
+  taskmanager:
+    image: flink:1.9-scala_2.11
+    depends_on:
+      - jobmanager
+    command: "taskmanager.sh start-foreground"
+    volumes:
+      - ./conf:/opt/flink/conf
+      - flink-checkpoint-directory:/tmp/flink-checkpoint-directory
+      - /tmp/flink-savepoints-directory:/tmp/flink-savepoints-directory
+    environment:
+      - JOB_MANAGER_RPC_ADDRESS=jobmanager
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:management
+    hostname: my-rabbit
+    ports:
+      - 15672:15672
+      - 5672:5672
+
+volumes:
+  flink-checkpoint-directory:

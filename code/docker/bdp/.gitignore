@@ -1,0 +1,8 @@
+hs_err*
+hsperf*/
+jna-*/
+liblz*
+snappy*
+user-apps/
+
+

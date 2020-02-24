@@ -1,0 +1,12 @@
+#logging:
+#  level:
+#    org.springframework: ERROR
+##    org.springframework.orm.jpa: INFO       # this is for transaction logging
+##    org.springframework.transaction: INFO   # this is for transaction logging
+#    com.example.spring.rabbitmq: INFO
+#  pattern:
+#    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+#    file: "%d %p %c{1.} [%t] %m%n"
+#  file: app.log
+
+queue-name: client_1

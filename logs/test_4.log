@@ -1,0 +1,83 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:spring-rabitmq >---------------------
+[INFO] Building spring-rabitmq 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ spring-rabitmq ---
+[INFO] Deleting /Users/vi/Documents/Aalto/Semester 1/Big Data Platforms/Assignments/Assignment3/assignment-3-801681/code/testclientstreamingestapp/target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ spring-rabitmq ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ spring-rabitmq ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to /Users/vi/Documents/Aalto/Semester 1/Big Data Platforms/Assignments/Assignment3/assignment-3-801681/code/testclientstreamingestapp/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ spring-rabitmq ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ spring-rabitmq ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /Users/vi/Documents/Aalto/Semester 1/Big Data Platforms/Assignments/Assignment3/assignment-3-801681/code/testclientstreamingestapp/target/test-classes
+[INFO] /Users/vi/Documents/Aalto/Semester 1/Big Data Platforms/Assignments/Assignment3/assignment-3-801681/code/testclientstreamingestapp/src/test/java/com/example/spring/rabbitmq/bdd/config/ParserConfig.java: /Users/vi/Documents/Aalto/Semester 1/Big Data Platforms/Assignments/Assignment3/assignment-3-801681/code/testclientstreamingestapp/src/test/java/com/example/spring/rabbitmq/bdd/config/ParserConfig.java uses unchecked or unsafe operations.
+[INFO] /Users/vi/Documents/Aalto/Semester 1/Big Data Platforms/Assignments/Assignment3/assignment-3-801681/code/testclientstreamingestapp/src/test/java/com/example/spring/rabbitmq/bdd/config/ParserConfig.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ spring-rabitmq ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.spring.rabbitmq.bdd.CucumberTest
+14:42:41.358 [main] DEBUG o.s.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.spring.rabbitmq.bdd.stepdef.BaseSteps] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+14:42:41.455 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.spring.rabbitmq.bdd.stepdef.BaseSteps], using SpringBootContextLoader
+14:42:41.462 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Did not detect default resource location for test class [com.example.spring.rabbitmq.bdd.stepdef.BaseSteps]: class path resource [com/example/spring/rabbitmq/bdd/stepdef/BaseSteps-context.xml] does not exist
+14:42:41.463 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Did not detect default resource location for test class [com.example.spring.rabbitmq.bdd.stepdef.BaseSteps]: class path resource [com/example/spring/rabbitmq/bdd/stepdef/BaseStepsContext.groovy] does not exist
+14:42:41.464 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.example.spring.rabbitmq.bdd.stepdef.BaseSteps]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:42:42.035 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.spring.rabbitmq.bdd.stepdef.BaseSteps]: using defaults.
+14:42:42.048 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+14:42:42.075 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+14:42:42.202 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3a45c42a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@36dce7ed, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@47a64f7d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@33d05366, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27a0a5a2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7692cd34, org.springframework.test.context.event.EventPublishingTestExecutionListener@33aa93c, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@32c0915e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@106faf11, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@70f43b45, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@26d10f2e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@10ad20cb]
+14:42:42.288 [main] DEBUG o.s.t.c.s.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.0.RELEASE)
+
+2019-11-27 14:42:44.452  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Starting BaseSteps on dyd5.kyla.fi with PID 73943 (started by vi in /Users/vi/Documents/Aalto/Semester 1/Big Data Platforms/Assignments/Assignment3/assignment-3-801681/code/testclientstreamingestapp)
+2019-11-27 14:42:44.453  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : The following profiles are active: test
+2019-11-27 14:42:57.956  INFO 73943 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: localhost:5672
+2019-11-27 14:42:59.492  INFO 73943 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitMqConnectionFactory#5f174dd2:0/SimpleConnection@8641b7d [delegate=amqp://guest@127.0.0.1:5672/, localPort= 57587]
+2019-11-27 14:42:59.956  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Started BaseSteps in 17.664 seconds (JVM running for 34.247)
+2019-11-27 14:43:00.689  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Exchange alarms is created
+2019-11-27 14:43:00.741  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Queue total.battery.voltage.queue is created true
+2019-11-27 14:43:01.138  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Queue power.grid.voltage.queue is created true
+2019-11-27 14:43:01.155  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Queue equipment.failed.queue is created true
+2019-11-27 14:43:01.202  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Queue my.output is created true
+2019-11-27 14:43:01.251  WARN 73943 --- [pool-2-thread-1] o.s.a.r.listener.BlockingQueueConsumer   : Cancel received for amq.ctag-hEWUHOGSuADkj7v4Y-Jilw (my.output); Consumer@5e905f2c: tags=[[amq.ctag-hEWUHOGSuADkj7v4Y-Jilw]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@bbb6f0 Shared Rabbit Connection: SimpleConnection@8641b7d [delegate=amqp://guest@127.0.0.1:5672/, localPort= 57587], acknowledgeMode=AUTO local queue size=0
+2019-11-27 14:43:01.260  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Queue late.events is created true
+2019-11-27 14:43:01.348  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Queue total.battery.voltage.queue binded to exchange alarms using routing key '141'
+2019-11-27 14:43:01.357  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Queue power.grid.voltage.queue binded to exchange alarms using routing key '121'
+2019-11-27 14:43:01.365  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Queue equipment.failed.queue binded to exchange alarms using routing key '303'
+2019-11-27 14:43:01.723  INFO 73943 --- [           main] c.e.s.rabbitmq.bdd.stepdef.BaseSteps     : Beginning reading the file
+2019-11-27 14:43:01.947  WARN 73943 --- [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.rabbit.support.ConsumerCancelledException
+2019-11-27 14:43:01.948  INFO 73943 --- [ntContainer#0-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@5e905f2c: tags=[[]], channel=Cached Rabbit Channel: AMQChannel(amqp://guest@127.0.0.1:5672/,1), conn: Proxy@bbb6f0 Shared Rabbit Connection: SimpleConnection@8641b7d [delegate=amqp://guest@127.0.0.1:5672/, localPort= 57587], acknowledgeMode=AUTO local queue size=0
+2019-11-27 14:43:17.118  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 17:50:00 UTC","windowEnd":"2017-02-18 18:00:00 UTC","datapointId":114,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":2}
+2019-11-27 14:43:23.862  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 17:50:00 UTC","windowEnd":"2017-02-18 18:00:00 UTC","datapointId":114,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":2}
+2019-11-27 14:43:24.316  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 18:10:00 UTC","windowEnd":"2017-02-18 18:20:00 UTC","datapointId":116,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":2}
+2019-11-27 14:43:24.317  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 17:50:00 UTC","windowEnd":"2017-02-18 18:00:00 UTC","datapointId":114,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":1}
+2019-11-27 14:43:24.319  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 18:10:00 UTC","windowEnd":"2017-02-18 18:20:00 UTC","datapointId":114,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":2}
+2019-11-27 14:43:30.325  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 17:50:00 UTC","windowEnd":"2017-02-18 18:00:00 UTC","datapointId":114,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":2}
+2019-11-27 14:43:36.392  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 17:50:00 UTC","windowEnd":"2017-02-18 18:00:00 UTC","datapointId":114,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":2}
+2019-11-27 14:43:41.481  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 18:10:00 UTC","windowEnd":"2017-02-18 18:20:00 UTC","datapointId":114,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":1}
+2019-11-27 14:43:42.163  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 17:50:00 UTC","windowEnd":"2017-02-18 18:00:00 UTC","datapointId":114,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":1}
+2019-11-27 14:43:42.164  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 18:10:00 UTC","windowEnd":"2017-02-18 18:20:00 UTC","datapointId":114,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":2}
+2019-11-27 14:43:42.165  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 18:10:00 UTC","windowEnd":"2017-02-18 18:20:00 UTC","datapointId":116,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":2}
+2019-11-27 14:43:48.008  INFO 73943 --- [ntContainer#0-2] c.e.s.r.bdd.receiver.TestRabbitReceiver  : Received a record statistics event: {"windowStart":"2017-02-18 17:50:00 UTC","windowEnd":"2017-02-18 18:00:00 UTC","datapointId":114,"stationId":1161114020,"alarmId":303,"nrOfTimesEquipmentFailed":2}
